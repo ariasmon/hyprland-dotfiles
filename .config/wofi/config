@@ -1,0 +1,11 @@
+# ~/.config/wofi/config
+prompt=Search...
+width=500
+height=300
+show=drun
+insensitive=true
+term=ghostty
+allow_markup=true
+hide_scroll=true
+no_actions=true
+location=center

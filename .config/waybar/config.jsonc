@@ -1,0 +1,66 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "margin": 0,
+  "spacing": 6,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["custom/clock"],
+  "modules-right": ["network", "cpu","memory", "pulseaudio", "battery", "custom/power"],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "●",
+    "format-icons": {
+      "active": "●",
+      "default": "○"
+    }
+  },
+
+  "custom/clock": {
+    "id": "custom-clock",
+    "exec": "date '+%a | %H:%M | %d-%m'",
+    "interval": 1,
+    "format": "{}",
+    "tooltip": false,
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "Intensity: {signalStrength}%\nIP: {ipaddr}\n↓ {bandwidthDownBits} ↑ {bandwidthUpBits}"
+  },
+
+  "cpu": {
+    "format": " {usage}%"
+  },
+
+  "memory": {
+    "format": " {percentage}%"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "🔇",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+     "tooltip": false,
+     "on-click": "pavucontrol"
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "format-charging": "{capacity}% "
+  },
+
+  "custom/power": {
+    "exec": "echo ''",
+    "format": "{}",
+    "on-click": "~/.config/hypr/hyprscripts/power_menu.sh",
+    "tooltip": false
+  }
+}

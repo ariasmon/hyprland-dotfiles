@@ -1,0 +1,77 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    padding: 0 10px;
+    margin: 0;
+    color: #ffffff;
+}
+
+#workspaces button {
+    background: transparent;
+    border: none;
+    margin: 0 4px;
+    color: #888888;
+    font-size: 14px;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    color: #cccccc;
+}
+
+#network,
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#custom-power {
+    background: transparent;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 2px 8px;
+    margin: 0 4px;
+    min-height: 24px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#battery:hover,
+#custom-power:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+#custom-clock {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 2px 12px;
+    margin: 0 4px;
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 24px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#custom-clock:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+#custom-power {
+    background: transparent;
+}
+
+#custom-power:hover {
+    background: rgba(255,255,255,0.05);
+}
